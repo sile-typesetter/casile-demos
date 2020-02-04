@@ -37,10 +37,10 @@ It's possible to be a bit more creative with your source files. Because all Mark
 
 For example `fancy_book.md` doesn't actually have any content, it is just a placeholder that loads chapter files from a directory.
 
-You con also directly build any arbitrary output:
+You can also directly build any arbitrary output:
 
 ```
-make fancy_book-halfletter-softcover.pdf
+make fancy_book-cep-paperback.pdf
 ```
 
 [casile]: https://github.com/alerque/casile
