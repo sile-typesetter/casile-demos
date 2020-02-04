@@ -1,0 +1,14 @@
+---
+title: CaSILE Book with Chapters
+subtitle: Fancy File Layouts
+creator:
+  - role: author
+    file-as: Author
+    text: Caleb Maclennan
+    about: >
+      Author of CaSILE. Likes chocolate.
+rights: >
+  ⓒ 2020 Caleb Maclennan, CC-BY-SA 4
+abstract: >
+  Much ado about nothing.
+...
