@@ -2,6 +2,8 @@
 
 This is a test book.
 
-# The end
+The main point is to show a minimal file layout.
 
-The main point is to test chapter numbering.
+# The End
+
+Short but sweet.
