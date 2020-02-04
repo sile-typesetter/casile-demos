@@ -31,4 +31,16 @@ make simple_book
 
 The output of this should be a `pub` directory with a couple files such as `simple_book-a4-print.pdf` (note *a4* is the default paper size and *print* is the default binding layout) as well as `simple_book.epub`.
 
+# A Slightly Fancier Book
+
+It's possible to be a bit more creative with your source files. Because all Markdown is pre-processed you can use `m4` (or even a templating language of your choosing) to bring multiple sources together.
+
+For example `fancy_book.md` doesn't actually have any content, it is just a placeholder that loads chapter files from a directory.
+
+You con also directly build any arbitrary output:
+
+```
+make fancy_book-halfletter-softcover.pdf
+```
+
 [casile]: https://github.com/alerque/casile
