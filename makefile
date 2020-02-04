@@ -1,6 +1,6 @@
 OUTPUTDIR = pub
 LAYOUTS = a4-print
-COVERS = false
+FORMATS = pdfs epub
 
 urlinfo = https://github.com/alerque/casile-demos
 
