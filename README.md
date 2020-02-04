@@ -21,12 +21,14 @@ This book uses the default settings for this repository. At a mimimum:
 * A matching pair of `<name>.md` and `<name>.yml` makes a book.
 * The Markdown file has content and the YAML metadata defines a title.
 
+Two additional settings beyond the minimum are setting a separate directory for finished products to land in (`PUBDIR`) and paring the expected output formats down to just *pdfs* and *epub* (by default all possible formats are generated).
+
 You can build it with the default options like this:
 
 ```
 make simple_book
 ```
 
-The output of this should be a `pub` directory with `book-a4-print.pdf`.
+The output of this should be a `pub` directory with a couple files such as `simple_book-a4-print.pdf` (note *a4* is the default paper size and *print* is the default binding layout) as well as `simple_book.epub`.
 
 [casile]: https://github.com/alerque/casile
