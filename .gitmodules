@@ -1,4 +1,4 @@
 [submodule "casile"]
 	path = casile
-	url = https://github.com/alerque/casile.git
+	url = https://github.com/sile-typesetter/casile.git
 	branch = master
