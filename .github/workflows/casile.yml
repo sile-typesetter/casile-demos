@@ -10,7 +10,7 @@ jobs:
       fail-fast: false
     runs-on: ubuntu-20.04
     container:
-      image: docker://siletypesetter/casile:master
+      image: docker://siletypesetter/casile:latest
       options: --entrypoint=bash
     steps:
       - name: Checkout
