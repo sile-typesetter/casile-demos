@@ -1,0 +1,29 @@
+name: CaSILE
+
+on: [push, pull_request]
+
+jobs:
+
+  casile:
+    name: CaSILE
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-20.04
+    container:
+      image: docker://siletypesetter/casile:latest
+      options: --entrypoint=bash
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Fetch tags
+        run: |
+          git fetch --prune --tags ||:
+      - name: make
+        run: casile make
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: pub.zip
+          path: pub/*
