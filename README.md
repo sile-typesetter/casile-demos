@@ -1,14 +1,20 @@
 # CaSILE Demos
 
-Think of this repository as if it was _your_ book project. This will show some samples of what it might look like to organize a book and its contents for publishing using [CaSILE][casile].
+This repository is a showcase of things that can be done with [CaSILE][].
+If you are just starting a new project and want to start with some minimal boiler plate, see the [CaSILE Template][casile-template] repository.
+Once you get the ball rolling, come back here for more ideas on what you can do.
 
-Get started by cloning this repository and initializing the toolkit:
+Think of this repository as if it was a book *series* project.
+There are several sample "books" showing off various possible features.
+This will show some samples of what it might look like to organize a book and its contents for publishing using [CaSILE][].
+
+Get started by cloning this repository:
 
 ```sh
 git clone https://github.com/alerque/casile-demos.git
 cd casile-demos
-git submodule update --init --remote
-make init
+casile setup
+casile make
 ```
 
 # A Very Simple Book
@@ -43,4 +49,5 @@ You can also directly build any arbitrary output:
 make fancy_book-cep-paperback.pdf
 ```
 
-[casile]: https://github.com/alerque/casile
+[CaSILE]: https://github.com/alerque/casile
+[casile-template]: https://github.com/alerque/casile-template
