@@ -1,29 +1,17 @@
 name: CaSILE
-
 on: [push, pull_request]
-
 jobs:
 
   casile:
-    name: CaSILE
-    strategy:
-      fail-fast: false
-    runs-on: ubuntu-20.04
-    container:
-      image: ghcr.io/sile-typesetter/casile:latest
-      options: --entrypoint=bash
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Fetch tags
-        run: |
-          git fetch --prune --tags ||:
-      - name: make
-        run: casile make
+      - name: CaSILE
+        id: casile
+        uses: sile-typesetter/casile@latest
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: pub.zip
-          path: pub/*
+          name: ${{ steps.casile.outputs.DISTDIR }}.zip
+          path: ${{ steps.casile.outputs.DISTDIR }}/*
