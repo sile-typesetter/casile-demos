@@ -10,6 +10,8 @@ jobs:
       - name: CaSILE
         id: casile
         uses: sile-typesetter/casile@latest
+        with:
+          args: ["-dv", "make"]
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
