@@ -7,11 +7,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: CaSILE
-        id: casile
-        uses: alerque/casile@action-experiments
+      - id: casile
+        uses: sile-typesetter/casile@shifty
         with:
-          args: -dv make
+          args: make -v -- debug
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
