@@ -6,6 +6,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - run: env
       - id: casile
         uses: sile-typesetter/casile@master
         with:
