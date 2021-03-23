@@ -1,4 +1,3 @@
-OUTPUTDIR = pub
 FORMATS = pdfs epub
 LAYOUTS = a5trim-paperback
 HIDPI = $(call scale,300)
