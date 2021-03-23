@@ -6,14 +6,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - run: |
-          echo "DISTDIR=foobar" >> $GITHUB_ENV
-          echo $GITHUB_ENV
-          env
       - id: casile
         uses: sile-typesetter/casile@master
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: foobar
-          path: foobar/*
+          name: ${{ steps.casile.outputs.DISTDIR }}
+          path: ${{ steps.casile.outputs.DISTDIR }}
