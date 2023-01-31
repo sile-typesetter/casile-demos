@@ -1,13 +1,16 @@
 name: CaSILE
-on: [push, pull_request]
+
+on: [ push, pull_request ]
+
 jobs:
   casile:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - id: casile
-        uses: sile-typesetter/casile@v0.10.12
+        name: Run CaSILE make
+        uses: sile-typesetter/casile@v0.10.13
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
