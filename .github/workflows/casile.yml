@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v3
       - id: casile
         name: Run CaSILE make
-        uses: sile-typesetter/casile@v0.10.13
+        uses: sile-typesetter/casile@v0.10.14
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
